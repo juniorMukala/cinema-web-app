@@ -9,6 +9,12 @@ function CardList(props) {
             key={index}
             name={element.name}
             email={element.email}
+            phone={element.phone}
+            address={element.address}
+            city={element.address.city}
+            company={element.company.name}
+            website={element.website}
+            street={element.address.street}
             url={`https://robohash.org/${element.id}`}
           />
         );
@@ -16,5 +22,7 @@ function CardList(props) {
     </div>
   );
 }
+
+
 
 export default CardList;

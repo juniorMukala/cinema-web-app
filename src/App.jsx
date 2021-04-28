@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SearchBar from "./Components/SearchBar.jsx";
 import CardList from "./Components/CardList.jsx";
-import Card from "./Components/Card.jsx";
 
 function App() {
   const [robot, setRobot] = useState([]);
@@ -9,9 +8,13 @@ function App() {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
       .then(function (data) {
-        let datamapped = data.map(function ({ id, name, email }) {
-          return { id, name, email };
+        
+        let datamapped = data.map(function (element) {
+         
+          return element;
         });
+   
+        console.log(datamapped)
         setRobot(datamapped);
         setRefreshRobot(datamapped);
       });

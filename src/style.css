@@ -42,10 +42,47 @@ body {
   padding: 16px;
   margin: 8px;
   margin-bottom: 30px;
-  transition: all linear 0.5s;
+  transition: all linear 0.2s;
+}
+#CardOnclick {
+  
+  background-color: #9eebcf;
+  border-radius: 20px;
+  padding: 16px;
+  margin: 8px;
+  margin-bottom: 30px;
+  transition: all linear 0.2s;
+}
+#Card--MailOnclick1 {
+  width: 210px;
+  height: 30px;
+  font-size: 16px;
+  font-family: sans-serif;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+
+}
+
+#Card--Prenom_Nom-Onclick1 {
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  height: 20px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 700;
+
 }
 #Card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   
 }
 #Card--Photo {
@@ -55,7 +92,6 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
 
 #CardList {
   width: 1300px;
