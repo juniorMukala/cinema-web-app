@@ -1,45 +1,21 @@
-import React, { useState, useEffect } from "react";
-import SearchBar from "./Components/SearchBar.jsx";
-import CardList from "./Components/CardList.jsx";
+import React from 'react'
+import { Route, Switch } from 'react-router-dom';
+import Accueil from './Components/Accueil';
+import CardContainer from './Components/CardContainer';
+import ToShowMovies from './Components/ToShowMovies';
+import NavBar from "./Components/NavBar";
 
-function App() {
-  const [robot, setRobot] = useState([]);
-  useEffect(function () {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((res) => res.json())
-      .then(function (data) {
-        
-        let datamapped = data.map(function (element) {
-         
-          return element;
-        });
-   
-        console.log(datamapped)
-        setRobot(datamapped);
-        setRefreshRobot(datamapped);
-      });
-  }, []);
-
-  const [refreshRobot, setRefreshRobot] = useState(robot)
-
-  function handleChange (event) {
-    event.preventDefault();
-    const filterRobots = robot.filter(function(element){
-      return element.name.toLowerCase().includes(event.target.value.toLowerCase());
-    })
-
-    setRefreshRobot(filterRobots)
-
-  }
-
+const App = () => {
   return (
-    <>
-      <h1 id="Title">Mes amis Robots</h1>
-      <SearchBar onChange={handleChange} />
-      <CardList data={refreshRobot} />
-    
-    </>
+    <div className="App">
+        <Switch>
+         <Route exact path='/' component={CardContainer}>
+          </Route>
+          <Route path='/ToShowMovies' component={ToShowMovies}>
+          </Route>
+        </Switch>
+    </div>
   );
 }
 
-export default App;
+export default App; 

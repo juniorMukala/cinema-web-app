@@ -1,147 +1,47 @@
-@font-face {
-  font-family: Sega;
-  src: url(./Police/sega/SEGA.woff)
-}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: 0;
-}
-body {
- /* background-color: #2b8180; */
- background-image: linear-gradient(to right, #2b8180 , #081d53);
-}
-#Title {
-  text-align: center;
-  color: #4acac4;
-  font-family: Sega;
-  font-size:48px;
-  font-weight: normal;
-  margin-top: 50px;
-}
-
-#SearchBar {
-  margin-left: 50%;
-  position: relative;
-  transform: translateX(-50%);
-  height: 52px;
-  width: 235px;
-  background-color: #cdecfe;
-  margin-top: 3%;
-  padding-left: 16px;
-  font-size: 16px;
-  outline: none;
-  border: solid 1px #19A974
-}
-
-#Card {
-  width: 210px;
-  height: 350px;
-  background-color: #9eebcf;
-  border-radius: 20px;
-  padding: 16px;
-  margin: 8px;
-  margin-bottom: 30px;
-  transition: all linear 0.2s;
-}
-#CardOnclick {
   
-  background-color: #9eebcf;
-  border-radius: 20px;
-  padding: 16px;
-  margin: 8px;
-  margin-bottom: 30px;
-  transition: all linear 0.2s;
 }
-#Card--MailOnclick1 {
-  width: 210px;
-  height: 30px;
-  font-size: 16px;
-  font-family: sans-serif;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: sans-serif;
-
-}
-
-#Card--Prenom_Nom-Onclick1 {
-
+.carousel-item {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: sans-serif;
-  height: 20px;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-  font-weight: 700;
-
-}
-#Card:hover {
-  transform: scale(1.05);
   
 }
-#Card--Photo {
-  height: 200px;
-  width: 200px;
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.carousel-indicators{
+  border: none;
+  display: none;
 }
-
-#CardList {
-  width: 1300px;
-  height: 200px;
-  margin: 0 auto;
-  margin-top : 5%;
+.cardContainer{
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  border-radius: 20px;
   flex-wrap: wrap;
-
-}
-#Card:nth-child(8) {
-  width: 336px !important;
-  height: 350px !important;
-}
-#Card:nth-child(6) {
-  width: 250px !important;
-  height: 350px !important;
-}
-#Card--Prenom_Nom {
-
-  width: 100%;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  font-family: sans-serif;
-  height: 20px;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-  font-weight: 700;
-
 }
 
-#Card--Mail {
-  width: 210px;
-  height: 30px;
-  font-size: 16px;
-  font-family: sans-serif;
-  margin: 0 auto;
+.card {
+  margin: 2%;
+  width: 15%;
+  height: 15%;
+}
+.navbar{
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: sans-serif;
-
+  height: 3%;
 }
-#Url {
-  height: 200px;
-  width: 200px;
+
+.btn {
+  height: 4%;
+}
+.card-img-overlay{
+  display: flex;
+  justify-content: space-between;
+}
+.NavBar ul{
+  display: flex;
+}
+.NavBar ul li{
+  margin: 10px;
+}
+.input-group{
+  width: 20%;
 }
