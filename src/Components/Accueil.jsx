@@ -10,6 +10,9 @@ import Card from './Card';
 const Accueil = () => {
     return (
         <>
+        <form>
+            <input type="text" placeholder="Search movies..."/>
+        </form>
             <div className="cardAccueil bg-dark text-white">
                 <img
                     src={Ninja}
