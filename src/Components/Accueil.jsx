@@ -1,6 +1,6 @@
 import React from 'react';
 import * as mdb from 'mdb-ui-kit'; 
-import { Input } from 'mdb-ui-kit'; git lo
+import { Input } from 'mdb-ui-kit'; 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import SearchBar from './SearchBar';
 import Ninja from "../Images/3626966.jpg";
