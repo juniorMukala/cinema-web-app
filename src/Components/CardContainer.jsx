@@ -6,19 +6,32 @@ const CardContainer = () => {
 
     return (
         <>
-        <Accueil/>
-        <div className="cardContainer">                   
-        <Card className="col-sm-12 col-md-3"/>    
-        <Card className="col-sm-12 col-md-3"/>    
-        <Card className="col-sm-12 col-md-3"/>    
-        <Card className="col-sm-12 col-md-3"/>    
-        <Card className="col-sm-12 col-md-3"/>    
-        <Card className="col-sm-12 col-md-3"/>    
-        <Card className="col-sm-12 col-md-3"/>    
-        <Card className="col-sm-12 col-md-3"/>    
-        <Card className="col-sm-12 col-md-3"/>    
-        <Card className="col-sm-12 col-md-3"/>       
-        </div>
+            <div className="row">
+                <div className="col-sm-12 col-md-3 m-0">
+                    <Card />
+                </div>
+                <div className="col-sm-12 col-md-3 m-0">
+                    <Card />
+                </div>
+                <div className="col-sm-12 col-md-3 m-0">
+                    <Card />
+                </div>
+                <div className="col-sm-12 col-md-3 m-0">
+                    <Card />
+                </div>
+                <div className="col-sm-12 col-md-3 m-0">
+                    <Card />
+                </div>
+                <div className="col-sm-12 col-md-3 m-0">
+                    <Card />
+                </div>
+                <div className="col-sm-12 col-md-3 m-0">
+                    <Card />
+                </div>
+                <div className="col-sm-12 col-md-3 m-0">
+                    <Card />
+                </div>
+            </div>
         </>
         
     );

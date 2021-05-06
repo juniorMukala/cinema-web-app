@@ -1,4 +1,4 @@
-
+/* 
 * {
   margin: 0;
   padding: 0;
@@ -36,12 +36,33 @@
   display: flex;
   justify-content: space-between;
 }
+
+.NavBar ul li{
+  margin: 10px;
+}
+ */
 .NavBar ul{
   display: flex;
+  background: #000; 
 }
 .NavBar ul li{
   margin: 10px;
+  padding-left: 50px;
+  font-size: 25px;
+  color: yellow;
+  list-style: none;
+  
+}
+.NavBar ul li a{
+  color: yellow;
 }
 .input-group{
   width: 20%;
 }
+.messageAccueil{
+  text-align: center;
+  color: black;
+  font-size: 30px;
+  transform: translateY(20px);
+}
+

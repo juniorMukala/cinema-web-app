@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import SearchBar from './SearchBar';
 import Ninja from "../Images/3626966.jpg";
 import NavBar from './NavBar';
+import Card from './Card';
 
 const Accueil = () => {
     return (
@@ -14,12 +15,35 @@ const Accueil = () => {
                     src={Ninja}
                     class="card-img"
                     alt="..."
+                    
                 />
-                <div class="card-img-overlay">
-                    <h5 class="card-title"> <NavBar/></h5>
-                    <p class="card-text">SHOW AND DOWNLOAD YOUR FAVORITES MOVIES</p>
-                    <SearchBar/>
-                   
+                
+            </div>  
+            <p  className="messageAccueil">VOUS ETES AU BON ENDROIT, VOICI LES MEILLEURS FILMS PROPOSÉS</p> 
+            <div className="row">
+                <div className="col-sm-12 col-md-3 m-0">
+                    <Card />
+                </div>
+                <div className="col-sm-12 col-md-3 m-0">
+                    <Card />
+                </div>
+                <div className="col-sm-12 col-md-3 m-0">
+                    <Card />
+                </div>
+                <div className="col-sm-12 col-md-3 m-0">
+                    <Card />
+                </div>
+                <div className="col-sm-12 col-md-3 m-0">
+                    <Card />
+                </div>
+                <div className="col-sm-12 col-md-3 m-0">
+                    <Card />
+                </div>
+                <div className="col-sm-12 col-md-3 m-0">
+                    <Card />
+                </div>
+                <div className="col-sm-12 col-md-3 m-0">
+                    <Card />
                 </div>
             </div>
         </>

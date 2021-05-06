@@ -2,19 +2,27 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom';
 import Accueil from './Components/Accueil';
 import CardContainer from './Components/CardContainer';
-import ToShowMovies from './Components/ToShowMovies';
+import ShowMovies from './Pages/ShowMovies';
 import NavBar from "./Components/NavBar";
 
 const App = () => {
   return (
+   <>
     <div className="App">
+     
+      <NavBar/>
+      
         <Switch>
-         <Route exact path='/' component={CardContainer}>
+          <Route path='/Accueil' component={Accueil}>
+          </Route> 
+          <Route exact path='/' component={CardContainer}>
           </Route>
-          <Route path='/ToShowMovies' component={ToShowMovies}>
+          <Route path='/ShowMovies'>
+            <ShowMovies/>
           </Route>
         </Switch>
     </div>
+   </>
   );
 }
 
