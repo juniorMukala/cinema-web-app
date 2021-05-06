@@ -1,6 +1,6 @@
 import React from 'react';
-import * as mdb from 'mdb-ui-kit'; // lib
-import { Input } from 'mdb-ui-kit'; // module
+import * as mdb from 'mdb-ui-kit'; 
+import { Input } from 'mdb-ui-kit'; git lo
 import 'bootstrap/dist/css/bootstrap.min.css'
 import SearchBar from './SearchBar';
 import Ninja from "../Images/3626966.jpg";
@@ -14,10 +14,8 @@ const Accueil = () => {
                 <img
                     src={Ninja}
                     class="card-img"
-                    alt="..."
-                    
-                />
-                
+                    alt="..." 
+                />   
             </div>  
             <p  className="messageAccueil">VOUS ETES AU BON ENDROIT, VOICI LES MEILLEURS FILMS PROPOSÉS</p> 
             <div className="row">

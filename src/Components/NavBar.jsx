@@ -10,6 +10,7 @@ const NavBar = () => {
                 <li><Link to='/'>MOVIES</Link></li>
                 <li><Link to='/ShowMovies'>SERIES</Link></li>
             </ul>
+            <input type="text" placeholder="SEARCH YOUR FAVORITE MOVIES OR SERIES"/>
         </div>
     );
 };
