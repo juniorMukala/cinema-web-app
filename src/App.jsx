@@ -7,13 +7,11 @@ import ShowMovies from './Pages/ShowMovies';
 import NavBar from "./Components/NavBar";
 
 const App = () => {
-   
   return (
    <>
     <div className="App">
      
       <NavBar/>
-      
         <Switch>
           <Route path='/Accueil' component={Accueil}>
           </Route> 
@@ -27,5 +25,4 @@ const App = () => {
    </>
   );
 }
-
 export default App; 
