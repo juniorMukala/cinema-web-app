@@ -1,8 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import soldat from "../Images/3626964.jpg"
-
-;
+import soldat from "../Images/3626964.jpg";
 
 const Card = () => {
     return(
@@ -24,7 +22,6 @@ const Card = () => {
                     Some quick example text to build on the card title and make up the bulk of the
                     card's content chchcjcjvkvkkfkkkfkkfkfkff.
                     </p>
-                   {/*  <button type="button" className=" btn btn-primary">MORE</button> */}
                 </div>
 
             </div>
