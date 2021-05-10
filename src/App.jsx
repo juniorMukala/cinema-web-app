@@ -2,20 +2,20 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom';
 import { useState } from "react";
 import Accueil from './Components/Accueil';
-import CardContainer from './Components/CardContainer';
-import ShowMovies from './Pages/ShowMovies';
-import NavBar from "./Components/NavBar";
+
+import ShowMovies from './Pages/CategoryMovies';
+import Header from "./Components/Header";
 
 const App = () => {
   return (
    <>
     <div className="App">
      
-      <NavBar/>
+      <Header/>
         <Switch>
           <Route path='/Accueil' component={Accueil}>
           </Route> 
-          <Route exact path='/' component={CardContainer}>
+          <Route exact path='/' component="">
           </Route>
           <Route path='/ShowMovies'>
             <ShowMovies/>
