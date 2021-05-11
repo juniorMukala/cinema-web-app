@@ -4,6 +4,8 @@
   background: #032541;
 }
 .NavBar input {
+  text-align: center;
+  color: white;
   height: 40px;
   width: 300px;
   transform: translateY(10px);
@@ -12,9 +14,9 @@
   border-radius: 5px;
   margin-right: 50px;
 }
-
 .NavBar ul {
   display: flex;
+  height: auto;
 }
 .NavBar ul li {
   margin: 10px;
@@ -24,29 +26,44 @@
   font-size: 16px;
   color: white;
   list-style: none;
+  transform: translateY(6px);
 }
 .NavBar ul li a {
   color: white;
 }
+
 .input-group {
   width: 10%;
+  border-radius: 15px;
 }
 
-.messageAccueil {
+.titlePage {
   text-align: center;
-  color: black;
-  font-size: 30px;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #032541;
   transform: translateY(20px);
 }
 .card {
-  width: 25%;
-  height: 35vh;
+  width: 28%;
+  height: 40vh;
   border-radius: 5px;
+  
+}
+.card-body{
+  background: #032541;
 }
 .card-title {
   font-family: "Source Sans Pro", Arial, sans-serif;
   font-weight: 700;
-  color: #032541;
+  color: white;
+ 
+}
+.card-text{
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-weight: 700;
+  color: white;
 }
 
 .card-img-top {
@@ -55,29 +72,52 @@
 .container {
   display: flex;
 }
+
 .footer {
-  background-color: #fff;
+  /* height: 20vh; */
+  background-color:  #032541;
+  display: flex;
+  justify-content: space-around;
+}
+.footer p{
+  color: white;
+}
+.footerText{
+  width: 30%;
+}
+.categoryFilm{
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  flex-wrap: wrap;
+}
+.categoryFilm p{
+border: white solid 1px;
+border-radius: 100% ;
+margin: 20px;
+padding: 10px;
 }
 .text{
   transform: translateY(17px);
 }
-.titre{
+.title{
   height: 5vh;
 }
 .titre p {
   color: #032541;
   display: inline;
   font-family: "Source Sans Pro", Arial, sans-serif;
-  border: 3px solid #032541;
+  border: 1px solid #032541;
   border-radius: 5px;
   height: 5vh;
 }
 .category{
   height: 5vh;
+  text-align: center;
 }
 .category p{
   color: #032541;
-  border: 3px solid #032541;
+  border: 1px solid #032541;
   border-radius: 5px;
   height: 5vh;
   font-family: "Source Sans Pro", Arial, sans-serif;
