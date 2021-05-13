@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-const Home = () => {
+const Genre_Movies = () => {
 const[genre, setGenre]=useState([])
 /* console.log(genre); */
 useEffect(()=>{
@@ -29,4 +29,4 @@ useEffect(()=>{
     );
 };
 
-export default Home;
+export default Genre_Movies;

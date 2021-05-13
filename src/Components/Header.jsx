@@ -1,18 +1,26 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
-import SearchBar from './SearchBar';
+import SearchBar from "./SearchBar";
 
-const Header = () => {
-    return (
-        <div className="NavBar">
-            <ul>
-                <li><Link to='/'>ACCUEIL</Link></li>
-                <li><Link to='/Actors'>ACTORS</Link></li>
-                <li><Link to='/ShowMovies'>SERIES</Link></li>
-            </ul>
-           {/*  <input type="text" placeholder="SEARCH"/> */}
-        </div>
-    );
+const Header = (submit, onChange) => {
+  return (
+    <div className="NavBar">
+      <form action="" onSubmit={submit}>
+        <SearchBar onChange={onChange} />
+      </form>
+      <ul>
+        <li>
+          <Link to="/">ACCUEIL</Link>
+        </li>
+        <li>
+          <Link to="/Actors">ACTORS</Link>
+        </li>
+        <li>
+          <Link to="/ShowMovies">SERIES</Link>
+        </li>
+      </ul>
+    </div>
+  );
 };
 
 export default Header;

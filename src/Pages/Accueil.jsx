@@ -1,19 +1,14 @@
 import React from "react";
-import * as mdb from "mdb-ui-kit";
-import { Input } from "mdb-ui-kit";
 import { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import SearchBar from "../Components/SearchBar";
 import Header from "../Components/Header";
 import Card from "../Components/Card";
 import Footer from "../Components/Footer";
-import Home from "../Components/Home";
+import Genre_Movies from "../Components/Genre_Movies";
 
 const Accueil = () => {
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState(movies);
-  const { THE_MOVIEDB_API_KEY } = process.env;
-
   useEffect(() => {
     const fetchPopularMovies = async () => {
       const results = await fetch(
@@ -46,21 +41,13 @@ const Accueil = () => {
   };
   return (
     <>
-      <form action="" onSubmit={submit}>
-        <SearchBar onChange={onChange} />
-      </form>
-      <Home />
-        <div className="row justify-content-center">
-          {movies.map((movie, index) => (
-            <Card
-              movie={movie}
-              key={index}
-              keys={index}
-              onClick={handleClick}
-            />
-          ))}
-        </div>
-     {/*  </div> */}
+      <Header onChange={onChange} submit={submit}/>
+      <Genre_Movies />
+      <div className="row justify-content-center">
+        {movies.map((movie, index) => (
+          <Card movie={movie} key={index} keys={index} onClick={handleClick} />
+        ))}
+      </div>
       <Footer />
     </>
   );
