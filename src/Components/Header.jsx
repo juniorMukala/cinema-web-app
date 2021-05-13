@@ -7,10 +7,10 @@ const NavBar = () => {
         <div className="NavBar">
             <ul>
                 <li><Link to='/Accueil'>ACCUEIL</Link></li>
-                <li><Link to='/'>MOVIES</Link></li>
+                <li><Link to='/Actors'>ACTORS</Link></li>
                 <li><Link to='/ShowMovies'>SERIES</Link></li>
             </ul>
-            <input type="text" placeholder="SEARCH"/>
+           {/*  <input type="text" placeholder="SEARCH"/> */}
         </div>
     );
 };

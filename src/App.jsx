@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom';
 import { useState } from "react";
 import Accueil from './Components/Accueil';
-import ShowMovies from './Pages/CategoryMovies';
+import Movies from './Pages/CategoryMovies';
+import Pepole from './Pages/Pepole'
 import Header from "./Components/Header";
+import Actors from './Pages/Actors';
 
 const App = () => {
   return (
@@ -16,8 +18,8 @@ const App = () => {
           </Route> 
           <Route exact path='/' component="">
           </Route>
-          <Route path='/ShowMovies'>
-            <ShowMovies/>
+          <Route path='/Actors'>
+            <Actors/>
           </Route>
         </Switch>
     </div>

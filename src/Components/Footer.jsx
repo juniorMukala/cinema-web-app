@@ -10,12 +10,6 @@ const Footer = () => {
                     <p>Animation</p>
                     <p>Comedy</p>
                     <p>Crime</p>
-                    <p>Dopcumentary</p>
-                    <p>Drama</p>
-                    <p>Family</p>
-                    <p>Fantasy</p>
-                    <p>History</p>
-                    <p>Science Fiction</p>
                 </div>
             </div>        
     );

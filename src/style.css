@@ -51,6 +51,9 @@
   border-radius: 5px;
   
 }
+.card :hover{
+  transform: scale3d(1.2);
+}
 .card-body{
   background: #032541;
 }
@@ -83,17 +86,17 @@
   color: white;
 }
 .footerText{
-  width: 30%;
+  
 }
 .categoryFilm{
   display: flex;
   justify-content: space-between;
-  width: 30%;
+
   flex-wrap: wrap;
 }
 .categoryFilm p{
 border: white solid 1px;
-border-radius: 100% ;
+/* border-radius: 100% ; */
 margin: 20px;
 padding: 10px;
 }
