@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import SearchBar from './SearchBar';
 
-const NavBar = () => {
+const Header = () => {
     return (
         <div className="NavBar">
             <ul>
-                <li><Link to='/'>ACCUEIL</Link></li>
+                <li><Link to='/Accueil'>ACCUEIL</Link></li>
                 <li><Link to='/Actors'>ACTORS</Link></li>
                 <li><Link to='/ShowMovies'>SERIES</Link></li>
             </ul>
@@ -15,4 +15,4 @@ const NavBar = () => {
     );
 };
 
-export default NavBar;
+export default Header;
