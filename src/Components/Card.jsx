@@ -2,7 +2,10 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import soldat from "../Images/3626964.jpg";
 
-const Card = () => {
+const Card = (movie) => {
+    console.log(movie);
+
+ 
     return(
             <div className="card text-center border border-primary shadow-0 m-3 hover-zoom" data-mdb-toggle="animation"
             data-mdb-animation-reset="true" data-mdb-animation="slide-out-right">
