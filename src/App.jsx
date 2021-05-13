@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom';
-import Accueil from './Components/Accueil';
+import Accueil from './Pages/Accueil';
 import Header from "./Components/Header";
 import Actors from './Pages/Actors';
 

@@ -3,11 +3,11 @@ import * as mdb from 'mdb-ui-kit';
 import { Input } from 'mdb-ui-kit'; 
 import {useState, useEffect} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import SearchBar from './SearchBar';
-import Header from './Header';
-import Card from './Card';
-import Footer from './Footer';
-import Home from './Home';
+import SearchBar from '../Components/SearchBar';
+import Header from '../Components/Header';
+import Card from '../Components/Card';
+import Footer from '../Components/Footer';
+import Home from '../Components/Home';
 
 const Accueil = () => {
 const [movies, setMovies]=useState([])
