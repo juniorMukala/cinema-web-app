@@ -16,18 +16,13 @@ useEffect(()=>{
     })
 },[])
     return (
-        <div className="card text-center row ">
+        <div className="category">
             {genre.map((category)=>{
                 return(
-            <div className="card text-center  ">
-                <div className="bg-image " >
+                <div className="categoryMovies" >
                     {category.name}
                 </div>
-            {/* <div class="card-body">
-                <p class="card-title">{popularActor.name}</p>
-                <p class="card-text">{popularActor.profile_path}</p>
-            </div> */}
-        </div> 
+       
                 )
             })}
         </div>

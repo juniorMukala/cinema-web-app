@@ -1,3 +1,6 @@
+body{
+  background-color: black;
+}
 .NavBar {
   display: flex;
   justify-content: space-between;
@@ -46,16 +49,16 @@
   transform: translateY(20px);
 }
 .card {
-  width: 28%;
+  width: 20%;
   height: 40vh;
-  border-radius: 5px;
+  border: white;
   
 }
 .card :hover{
   transform: scale3d(1.2);
 }
 .card-body{
-  background: #032541;
+  background: #032541; 
 }
 .card-title {
   font-family: "Source Sans Pro", Arial, sans-serif;
@@ -85,9 +88,6 @@
 .footer p{
   color: white;
 }
-.footerText{
-  
-}
 .categoryFilm{
   display: flex;
   justify-content: space-between;
@@ -114,14 +114,21 @@ padding: 10px;
   border-radius: 5px;
   height: 5vh;
 }
-.category{
+/* .category{
   height: 5vh;
   text-align: center;
-}
+} */
 .category p{
   color: #032541;
   border: 1px solid #032541;
   border-radius: 5px;
   height: 5vh;
   font-family: "Source Sans Pro", Arial, sans-serif;
+}
+.category{
+  display: flex;
+  justify-content: space-around;
+}
+.categoryMovies{
+  color: white;
 }
