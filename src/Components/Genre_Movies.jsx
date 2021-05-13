@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 const Genre_Movies = () => {
 const[genre, setGenre]=useState([])
-/* console.log(genre); */
 useEffect(()=>{
     fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=423e1233745f7663e4e066e1df2c3a0e&language=en-US")
     .then((data)=>{
-        /* console.log("données : ",data); */
         return data.json()
     })
     .then((array)=>{

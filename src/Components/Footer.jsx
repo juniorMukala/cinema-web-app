@@ -1,7 +1,7 @@
 import React from "react";
 const Footer = () => {
   return (
-    <div className="footerText">
+    <div className="footer">
       <p>THE MOVIES</p>
     </div>
   );

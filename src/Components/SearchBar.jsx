@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 const SearchBar = (props) => {
   return (
     <div class="input-group">
-      <input type="search" placeholder="Search" onChange={props.onChange}/>
+      <input type="search" placeholder="SEARCH" onChange={props.onChange}/>
     </div>
   )}
 export default SearchBar;

@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../Components/Header";
 import Card from "../Components/Card";
 import Footer from "../Components/Footer";
-import Genre_Movies from "../Components/Genre_Movies";
+import Genremovies from "../Components/Genre_Movies";
 
 const Accueil = () => {
   const [movies, setMovies] = useState([]);
@@ -17,7 +17,6 @@ const Accueil = () => {
       const data = await results.json();
       setMovies(data.results);
     };
-
     fetchPopularMovies();
   }, []);
 
@@ -42,7 +41,7 @@ const Accueil = () => {
   return (
     <>
       <Header onChange={onChange} submit={submit}/>
-      <Genre_Movies />
+      <Genremovies />
       <div className="row justify-content-center">
         {movies.map((movie, index) => (
           <Card movie={movie} key={index} keys={index} onClick={handleClick} />
