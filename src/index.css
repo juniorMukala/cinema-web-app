@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* background-color: black; */
+}
+
+html, body{
+  height: 100vh;
+  margin: 0;
+  background: black !important;
+  font-family: 'Montserrat', helvetica, arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+.ui.pagination.menu{
+  background-color: black;
+}
+.ui.menu .item{
+  color:white !important;
+}
+.ui.pagination.menu .active.item{
+  background-color: yellow;
+}

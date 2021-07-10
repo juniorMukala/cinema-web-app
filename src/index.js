@@ -1,9 +1,14 @@
 import React from "react";
 import ReactDom from "react-dom";
-import App from "./App.jsx";
-import './style.css'
-import {BrowserRouter} from 'react-router-dom'
+import App from "./App";
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'semantic-ui-css/semantic.min.css';
+import * as serviceWorker from './serviceWorker';
 
 ReactDom.render(
-<BrowserRouter><App/></BrowserRouter>
+<React.StrictMode>
+    <App/>
+</React.StrictMode>
 , document.getElementById("root"));
+serviceWorker.unregister()

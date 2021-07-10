@@ -1,14 +1,16 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Dimmer, Loader, Icon, Input, Header, Image } from "semantic-ui-react";
+import { Dimmer, Loader, Icon, Input, Header } from "semantic-ui-react";
 import themoviedb from "../services/api.themoviedb";
-import CardDetailActor from "../Components/CardDetailActor";
-import ScrollButton from "../Components/ScrollTopButton";
-import Pagination from "../Components/Pagination"
-const Actors = () => {
-  const [dataPerson, setDataPerson] = useState([]);
+import DetailSeries from "../Components/DetailSerie";
+import Pagination from "../Components/Pagination";
+import ScrollButton from "../Components/ScrollTopButton"
+
+
+const Series = () => {
+  const [series, setSeries] = useState([]);
+  console.log(series);
   const [curentPage, setCurentPage] = useState("News");
   const [curentPagePagination, setCurentPagePagination] = useState(1);
   const [loading, setLoading] = useState(true);
@@ -19,9 +21,9 @@ const Actors = () => {
   useEffect(() => {
     setLoading(true);
     themoviedb
-      .get(`/person/popular?page=${curentPagePagination}`)
+      .get(`/tv/popular?page=${curentPagePagination}`)
       .then((response) => {
-        setDataPerson(response.data.results);
+        setSeries(response.data.results);
         setLoading(false);
       })
       .catch((e) => {
@@ -34,7 +36,7 @@ const Actors = () => {
   const pagination = (activePage) => {
     setCurentPagePagination(activePage);
   };
-  const searchActor = (e) => {
+  const searchSeries = (e) => {
     const query = e.target.value.trim();
     if (query.length > 0 && query !== "") {
       setCurentPage("Recherche");
@@ -43,7 +45,7 @@ const Actors = () => {
         .then((response) => {
           const data = response.data.results;
           data.total_pages = -1;
-          setDataPerson(data);
+          setSeries(data);
         })
         .catch((e) => {
           console.log("une erreure est survenue");
@@ -58,35 +60,35 @@ const Actors = () => {
           <Input
             icon="search"
             placeholder="Rechercher..."
-            onChange={searchActor}
+            onChange={searchSeries}
             size="mini"
             className="w-100"
           />
         </div>
         <div className="container row">
-          {dataPerson && dataPerson.length !== 0
-            ? dataPerson.map((person) => {
+          {series && series.length !== 0
+            ? series.map((serie) => {
                 return (
                   <div
                     className="drawn_card"
                     onClick={(e) => {
                       setViewDetail(true);
-                      setMovieSelected(person.id);
+                      setMovieSelected(serie.id);
                     }}
                   >
                     <img
                       src={
-                        person.profile_path
+                        serie.backdrop_path
                           ? "https://image.tmdb.org/t/p/w300/" +
-                            person.profile_path
+                            serie.backdrop_path
                           : "https://semantic-ui.com/images/wireframe/image.png"
                       }
                       alt="..."
                     />
                     <div className="drawn_content">
-                      <p>{person.name}</p>
-                      <p>{person.known_for_department}</p>
-                      <p>{person.popularity}</p>
+                      <p>{serie.name}</p>
+                      <p>{serie.popularity}</p>
+                      <p>{serie.first_air_date}</p>
                     </div>
                   </div>
                 );
@@ -104,12 +106,12 @@ const Actors = () => {
             onClickOutside={(e) => setViewDetail(false)}
             page
           >
-            <CardDetailActor id={movieSelected} close={closeViewDetail} />
+            <DetailSeries id={movieSelected} close={closeViewDetail} />
           </Dimmer>
           <div className="text-center">
             <Pagination
               activePage={curentPagePagination}
-              totalPages={dataPerson.total_pages}
+              totalPages={series.total_pages}
               setActivePage={pagination}
             />
           </div>
@@ -119,4 +121,4 @@ const Actors = () => {
     </div>
   );
 };
-export default Actors;
+export default Series;

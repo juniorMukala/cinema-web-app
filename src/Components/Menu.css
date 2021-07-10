@@ -1,0 +1,22 @@
+
+#navbarNav{
+    color: white;
+}
+
+.nav-link{
+   font-size: 16px;
+   color: white;
+}
+.navbar-brand{
+   font-size: 20px;
+   font-family: "Roboto","sans-serif";
+   color: white;
+}
+.active{
+    border-bottom: 4px solid #61DAFB;
+}
+
+.navbar:hover{
+    border-bottom: solid yellow 1px;
+    
+}

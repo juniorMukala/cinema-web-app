@@ -1,0 +1,47 @@
+
+.callout {
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 1px solid #eee;
+    border-left-width: 5px;
+    h4 {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+    
+    & + .bs-callout {
+      margin-top: -5px;
+    }
+  }
+.callout-danger {
+  border-left-color: #d9534f;
+  h4 {
+    color: yellow;
+  }
+}
+.header-fixed{
+  background-color: black;
+  position: sticky !important;
+  top: 0;
+  z-index: 2;
+  padding : 10px 5px;
+  box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
+}
+.card-movie{
+  cursor: pointer;
+  transition: all 0.4s;
+  &:hover{
+    transform: scale(1.05);
+    transition: all 0.4s;
+  }
+}
+
+.bright{
+  box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
+  &:hover{
+    box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
+  }
+}
