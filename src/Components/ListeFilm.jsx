@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col, Card } from "react-bootstrap";
-import { Dimmer, Image } from "semantic-ui-react";
+import { Dimmer } from "semantic-ui-react";
 import "bootstrap/dist/css/bootstrap.min.css"
 import DetailFilm from "./DetailFilm";
 

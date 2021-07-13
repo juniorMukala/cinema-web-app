@@ -1,8 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Dimmer, Loader, Icon, Input, Header, Image } from "semantic-ui-react";
+import { Dimmer, Input, Loader, Header, Icon} from "semantic-ui-react";
 import themoviedb from "../services/api.themoviedb";
 import CardDetailActor from "../Components/CardDetailActor";
 import ScrollButton from "../Components/ScrollTopButton";
@@ -50,12 +49,33 @@ const Actors = () => {
           setModalError(true);
         });
     }
+    if (modalError) {
+      return (
+        <Dimmer active={modalError}>
+          <Header icon>
+            <Icon name="warning sign" color="red" />
+            <p className="text-danger">
+              Une erreur est survenue, Veillez vérifier votre connexion et
+              actualiser la page !
+            </p>
+          </Header>
+        </Dimmer>
+      );
+    }
+    if (loading) {
+      return (
+        <Dimmer active>
+          <Loader size="huge">Chargement</Loader>
+        </Dimmer>
+      );
+    }
   };
   return (
     <div className="container">
       <>
         <div className="float-sm-right text-align-center">
           <Input
+            curentPage={curentPage} 
             icon="search"
             placeholder="Rechercher..."
             onChange={searchActor}

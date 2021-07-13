@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Container } from "react-bootstrap";
-import { Dimmer, Loader, Icon, Input, Header } from "semantic-ui-react";
+import { Dimmer,Input, Loader, Header, Icon } from "semantic-ui-react";
 import themoviedb from "../services/api.themoviedb";
 import DetailSeries from "../Components/DetailSerie";
 import Pagination from "../Components/Pagination";
@@ -52,12 +51,33 @@ const Series = () => {
           setModalError(true);
         });
     }
+    if (modalError) {
+      return (
+        <Dimmer active={modalError}>
+          <Header icon>
+            <Icon name="warning sign" color="red" />
+            <p className="text-danger">
+              Une erreur est survenue, Veillez vérifier votre connexion et
+              actualiser la page !
+            </p>
+          </Header>
+        </Dimmer>
+      );
+    }
+    if (loading) {
+      return (
+        <Dimmer active>
+          <Loader size="huge">Chargement</Loader>
+        </Dimmer>
+      );
+    }
   };
   return (
     <div className="container">
       <>
         <div className="float-sm-right text-align-center">
           <Input
+          curentPage={curentPage}
             icon="search"
             placeholder="Rechercher..."
             onChange={searchSeries}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import themoviedb from "../services/api.themoviedb";
 import { Container } from "react-bootstrap";
-import { Dimmer, Loader, Icon, Input, Header } from "semantic-ui-react";
+import { Dimmer, Loader, Icon, Header } from "semantic-ui-react";
 import MenuTag from "../Components/MenuTag";
 import ListesFilms from "../Components/ListeFilm";
 import Pagination from "../Components/Pagination";
@@ -102,7 +102,7 @@ export default function Home() {
                     placeholder="Type to search for something"
                     onChange={searchMovies}
                   />
-                  <a href="#" class="search__button">
+                  <a href="#" class="search_button">
                     <i class="fas fa-search"></i>
                   </a>
                 </div>
