@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import themoviedb from "../services/api.themoviedb";
 import { Container } from "react-bootstrap";
-import { Dimmer, Loader, Icon, Header } from "semantic-ui-react";
+import { Loader, Icon, Header } from "semantic-ui-react";
 import MenuTag from "../Components/MenuTag";
 import ListesFilms from "../Components/ListeFilm";
 import Pagination from "../Components/Pagination";
@@ -62,7 +62,7 @@ export default function Home() {
 
   if (modalError) {
     return (
-      <Dimmer active={modalError}>
+      // <Dimmer active={modalError}>
         <Header icon>
           <Icon name="warning sign" color="red" />
           <p className="text-danger">
@@ -70,14 +70,14 @@ export default function Home() {
             actualiser la page !
           </p>
         </Header>
-      </Dimmer>
+      // </Dimmer>
     );
   }
   if (loading) {
     return (
-      <Dimmer active>
+      // <Dimmer active>
         <Loader size="huge">Chargement</Loader>
-      </Dimmer>
+      // </Dimmer>
     );
   }
   return (
@@ -94,9 +94,9 @@ export default function Home() {
                 <MenuTag curentPage={curentPage} switchPage={router} />
               </div>
               <div className="float-sm-right   text-align-center ">
-                <div class="search">
+                <div className="search">
                   <input
-                    class="search__text"
+                    className="search__text"
                     type="text"
                     name=""
                     placeholder="Type to search for something"

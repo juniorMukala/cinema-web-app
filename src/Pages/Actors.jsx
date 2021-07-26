@@ -118,7 +118,6 @@ const Actors = () => {
               Aucun film trouvé !!!
             </div>
               }
-
           <Dimmer
             active={viewDetail}
             onClickOutside={(e) => setViewDetail(false)}

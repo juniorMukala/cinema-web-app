@@ -1,14 +1,14 @@
 import React from "react";
-import { Link, NavLink} from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import "./Menu.css";
 import "../style.css"
 
 const Menu = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-black bg-black">
-     <Link className="navbar-brand">
+     <div className="navbar-brand">
         J<span>M</span>U<span>K</span>
-     </Link>
+     </div>
       <button
         className="navbar-toggler"
         type="button"
