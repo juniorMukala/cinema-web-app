@@ -102,9 +102,9 @@ export default function Home() {
                     placeholder="Type to search for something"
                     onChange={searchMovies}
                   />
-                  <a href="#" class="search_button">
+                  {/* <a href="#" class="search_button">
                     <i class="fas fa-search"></i>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
