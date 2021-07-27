@@ -7,7 +7,7 @@ import "../scss/detailFilm.scss";
 const Banner = styled.div`
   background: url(${({ backdrop_path }) =>
     backdrop_path
-      ? `https://image.tmdb.org/t/p/w300${backdrop_path}`
+      ? `https://image.tmdb.org/t/p/w300/${backdrop_path}`
       : "https://semantic-ui.com/images/wireframe/image.png"
   });
 `;
