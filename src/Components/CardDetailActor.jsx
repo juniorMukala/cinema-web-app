@@ -4,6 +4,19 @@ import themoviedb from "../services/api.themoviedb";
 import styled from "styled-components";
 import "../scss/detailFilm.scss";
 
+
+const Banner = styled.div`
+  background: url(${({ backdrop_path }) =>
+    backdrop_path
+      ? `https://image.tmdb.org/t/p/w300${backdrop_path}`
+      : "https://semantic-ui.com/images/wireframe/image.png"
+  })
+`;
+// const Banner = styled.div`
+// background: url(${infoMovie.profile_path
+//   ? "https://image.tmdb.org/t/p/w500/" + infoMovie.profile_path
+//   : "https://semantic-ui.com/images/wireframe/image.png"})`;
+
 export default function CardDetailActor({ id, close }) {
   const [infoMovie, setInfoMovie] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -22,10 +35,10 @@ export default function CardDetailActor({ id, close }) {
       });
   }, [id]);
 
-  const Banner = styled.div`
-    background: url(${infoMovie.profile_path
-      ? "https://image.tmdb.org/t/p/w500/" + infoMovie.profile_path
-      : "https://semantic-ui.com/images/wireframe/image.png"})`;
+  // const Banner = styled.div`
+  //   background: url(${infoMovie.profile_path
+  //     ? "https://image.tmdb.org/t/p/w500/" + infoMovie.profile_path
+  //     : "https://semantic-ui.com/images/wireframe/image.png"})`;
   if (loading) {
     return (
       <Dimmer active={loading}>
@@ -103,7 +116,12 @@ export default function CardDetailActor({ id, close }) {
               <button>voir un extrait</button>
             </div>
           </div>
-          <Banner className="blur_back bright_back"></Banner>
+
+          <Banner
+            className="blur_back bright_back"
+            backdrop_path={infoMovie.backdrop_path}
+          ></Banner>
+
         </div>
       </div>
     </>

@@ -2,10 +2,25 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import '../style.css';
 import React, { useState, useEffect } from "react";
-import { Rating, Dimmer, Loader, Icon, Header } from "semantic-ui-react";
+import { Rating, Loader, Icon, Header } from "semantic-ui-react";
 import themoviedb from "../services/api.themoviedb";
 import styled from "styled-components";
 import "../scss/detailFilm.scss";
+
+
+
+const Banner = styled.div`
+  background: url(${({ backdrop_path }) =>
+    backdrop_path
+      ? `https://image.tmdb.org/t/p/w500${backdrop_path}`
+      : "https://semantic-ui.com/images/wireframe/image.png"
+  });
+`;
+
+// const Banner = styled.div`
+//     background: url(${infoSeries.profile_path
+//       ? "https://image.tmdb.org/t/p/w500/" + infoSeries.profile_path
+//       : "https://semantic-ui.com/images/wireframe/image.png"})`;
 
 export default function DetailActor({ id, close }) {
   const [infoSeries, setInfoSeries] = useState([]);
@@ -25,20 +40,20 @@ export default function DetailActor({ id, close }) {
       });
   }, [id]);
 
-  const Banner = styled.div`
-    background: url(${infoSeries.profile_path
-      ? "https://image.tmdb.org/t/p/w500/" + infoSeries.profile_path
-      : "https://semantic-ui.com/images/wireframe/image.png"})`;
+  // const Banner = styled.div`
+  //   background: url(${infoSeries.profile_path
+  //     ? "https://image.tmdb.org/t/p/w500/" + infoSeries.profile_path
+  //     : "https://semantic-ui.com/images/wireframe/image.png"})`;
   if (loading) {
     return (
-      <Dimmer active={loading}>
+      // <Dimmer active={loading}>
         <Loader size="huge">Chargement</Loader>
-      </Dimmer>
+      /* </Dimmer> */
     );
   }
   if (errorModal) {
     return (
-      <Dimmer active={errorModal}>
+      // <Dimmer active={errorModal}>
         <Header icon>
           <Icon name="warning sign" color="red" />
           <p className="text-danger">
@@ -46,7 +61,7 @@ export default function DetailActor({ id, close }) {
             actualiser la page !
           </p>
         </Header>
-      </Dimmer>
+      /* </Dimmer> */
     );
   }
   return (
@@ -107,7 +122,10 @@ export default function DetailActor({ id, close }) {
               </ul>
             </div>
           </div>
-          <Banner className="blur_back bright_back"></Banner>
+          <Banner
+            className="blur_back bright_back"
+            backdrop_path={infoSeries.backdrop_path}
+          ></Banner>
         </div>
       </div>
     </>
