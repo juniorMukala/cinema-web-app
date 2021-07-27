@@ -75,7 +75,7 @@ export default function CardDetailActor({ id, close }) {
                   ? new Date(infoMovie.release_date).getFullYear()
                   : "-"}
               </h4>
-              <span className="minutes">{infoMovie.runtime} min</span>
+              <span className="minutes">{infoMovie.runtime}min</span>
               <p className="type">
                 {infoMovie.genres
                   ? infoMovie.genres.map((genre) => genre.name + "|")

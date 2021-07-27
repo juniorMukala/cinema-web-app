@@ -8,7 +8,7 @@ import ScrollButton from "../Components/ScrollTopButton"
 
 const Series = () => {
   const [series, setSeries] = useState([]);
-  const [curentPage, setCurentPage] = useState("News");
+  // const [curentPage, setCurentPage] = useState("News");
   const [curentPagePagination, setCurentPagePagination] = useState(1);
   const [loading, setLoading] = useState(true);
   const [modalError, setModalError] = useState(false);
@@ -36,7 +36,7 @@ const Series = () => {
   const searchSeries = (e) => {
     const query = e.target.value.trim();
     if (query.length > 0 && query !== "") {
-      setCurentPage("Recherche");
+      // setCurentPage("Recherche");
       themoviedb
         .get(`search/person?query=${query}&page=1`)
         .then((response) => {
@@ -75,7 +75,7 @@ const Series = () => {
       <>
         <div className="float-sm-right text-align-center">
           <Input
-          curentPage={curentPage}
+          // curentPage={curentPage}
             icon="search"
             placeholder="Rechercher..."
             onChange={searchSeries}
