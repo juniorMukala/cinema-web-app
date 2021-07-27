@@ -72,7 +72,6 @@ const Actors = () => {
   };
   return (
     <div className="container">
-      <>
         <div className="float-sm-right text-align-center">
           <Input
             curentPage={curentPage} 
@@ -85,7 +84,7 @@ const Actors = () => {
         </div>
         <div className="container row">
           {dataPerson && dataPerson.length !== 0
-            ? dataPerson.map((person) => {
+            ? dataPerson.map((person, key) => {
                 return (
                   <div
                     className="drawn_card"
@@ -93,6 +92,7 @@ const Actors = () => {
                       setViewDetail(true);
                       setMovieSelected(person.id);
                     }}
+                    key={key}
                   >
                     <img
                       src={
@@ -134,7 +134,6 @@ const Actors = () => {
           </div>
         </div>
         <ScrollButton /> 
-      </>
     </div>
   );
 };

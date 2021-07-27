@@ -6,10 +6,8 @@ import DetailSeries from "../Components/DetailSerie";
 import Pagination from "../Components/Pagination";
 import ScrollButton from "../Components/ScrollTopButton"
 
-
 const Series = () => {
   const [series, setSeries] = useState([]);
-  console.log(series);
   const [curentPage, setCurentPage] = useState("News");
   const [curentPagePagination, setCurentPagePagination] = useState(1);
   const [loading, setLoading] = useState(true);
@@ -87,9 +85,10 @@ const Series = () => {
         </div>
         <div className="container row">
           {series && series.length !== 0
-            ? series.map((serie) => {
+            ? series.map((serie, key) => {
                 return (
                   <div
+                    key={key}
                     className="drawn_card"
                     onClick={(e) => {
                       setViewDetail(true);
@@ -126,7 +125,7 @@ const Series = () => {
             onClickOutside={(e) => setViewDetail(false)}
             page
           >
-            <DetailSeries id={movieSelected} close={closeViewDetail} />
+          <DetailSeries id={movieSelected} close={closeViewDetail} />
           </Dimmer>
           <div className="text-center">
             <Pagination

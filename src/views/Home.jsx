@@ -6,7 +6,7 @@ import MenuTag from "../Components/MenuTag";
 import ListesFilms from "../Components/ListeFilm";
 import Pagination from "../Components/Pagination";
 import "../scss/home.scss";
-import '../Components/searchBar.scss'
+import '../Components/searchBar.scss';
 import "bootstrap/dist/css/bootstrap.min.css";
 import ScrollButton from "../Components/ScrollTopButton";
 
@@ -32,8 +32,6 @@ export default function Home() {
         console.log("une erreure est survenue");
       });
   }, [routeApi, curentPagePagination]);
-
-  
 
   const searchMovies = (e) => {
     const query = e.target.value.trim();
@@ -68,7 +66,6 @@ export default function Home() {
           <p className="text-danger">
             Une erreur est survenue, Veillez vérifier votre connexion et
             actualiser la page !
-            
           </p>
         </Header>
       // </Dimmer>

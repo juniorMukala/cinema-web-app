@@ -13,7 +13,6 @@ export default function CardDetailActor({ id, close }) {
     themoviedb
       .get(`/person/${id}`)
       .then((response) => {
-        console.log(response);
         setInfoMovie(response.data);
         setLoading(false);
       })
@@ -53,7 +52,7 @@ export default function CardDetailActor({ id, close }) {
         <div className="movie_card" id="bright">
           <div className="info_section">
             <div
-              class="close-btn"
+              className="close-btn"
               onClick={(e) => {
                 close();
               }}

@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { Rating, Dimmer, Loader, Icon, Header } from "semantic-ui-react";
+import { Rating, Loader, Icon, Header } from "semantic-ui-react";
 import themoviedb from "../services/api.themoviedb";
 import styled from "styled-components";
 import "../scss/detailFilm.scss";
+
+const Banner = styled.div`
+  background: url(${({ backdrop_path }) =>
+    backdrop_path
+      ? `https://image.tmdb.org/t/p/w300${backdrop_path}`
+      : "https://semantic-ui.com/images/wireframe/image.png"
+  });
+`;
 
 export default function DetailFilm({ id, close }) {
   const [infoMovie, setInfoMovie] = useState([]);
@@ -22,30 +30,24 @@ export default function DetailFilm({ id, close }) {
       });
   }, [id]);
 
-  const Banner = styled.div`
-    background: url(${infoMovie.backdrop_path
-      ? "https://image.tmdb.org/t/p/w500/" + infoMovie.backdrop_path
-      : "https://semantic-ui.com/images/wireframe/image.png"});
-  `;
-
   if (loading) {
     return (
-      <Dimmer active={loading}>
-        <Loader size="huge">Chargement</Loader>
-      </Dimmer>
+      // <Dimmer active={loading}>
+      <Loader size="huge">Chargement</Loader>
+      // </Dimmer>
     );
   }
   if (errorModal) {
     return (
-      <Dimmer active={errorModal}>
-        <Header icon>
-          <Icon name="warning sign" color="red" />
-          <p className="text-danger">
-            Une erreur est survenue, Veillez vérifier votre connexion et
-            actualiser la page !
-          </p>
-        </Header>
-      </Dimmer>
+      // <Dimmer active={errorModal}>
+      <Header icon>
+        <Icon name="warning sign" color="red" />
+        <p className="text-danger">
+          Une erreur est survenue, Veillez vérifier votre connexion et
+          actualiser la page !
+        </p>
+      </Header>
+      // </Dimmer>
     );
   }
 
@@ -105,7 +107,10 @@ export default function DetailFilm({ id, close }) {
               </ul>
             </div>
           </div>
-          <Banner className="blur_back bright_back"></Banner>
+          <Banner
+            className="blur_back bright_back"
+            backdrop_path={infoMovie.backdrop_path}
+          ></Banner>
         </div>
       </div>
     </>
