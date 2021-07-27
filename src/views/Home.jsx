@@ -47,7 +47,7 @@ export default function Home() {
           setDataMovies(data);
         })
         .catch((e) => {
-          console.log("une erreure est survenue");
+          console.log(e);
           setModalError(true);
         });
     }
@@ -68,6 +68,7 @@ export default function Home() {
           <p className="text-danger">
             Une erreur est survenue, Veillez vérifier votre connexion et
             actualiser la page !
+            
           </p>
         </Header>
       // </Dimmer>
