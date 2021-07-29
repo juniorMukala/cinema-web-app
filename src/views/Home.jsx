@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import themoviedb from "../services/api.themoviedb";
 import { Container } from "react-bootstrap";
-import { Loader, Icon, Header } from "semantic-ui-react";
+import { Loader, Dimmer, Icon, Header } from "semantic-ui-react";
 import MenuTag from "../Components/MenuTag";
 import ListesFilms from "../Components/ListeFilm";
 import Pagination from "../Components/Pagination";
@@ -60,7 +60,7 @@ export default function Home() {
 
   if (modalError) {
     return (
-      // <Dimmer active={modalError}>
+      <Dimmer active={modalError}>
         <Header icon>
           <Icon name="warning sign" color="red" />
           <p className="text-danger">
@@ -68,14 +68,14 @@ export default function Home() {
             actualiser la page !
           </p>
         </Header>
-      // </Dimmer>
+      </Dimmer>
     );
   }
   if (loading) {
     return (
-      // <Dimmer active>
+      <Dimmer active>
         <Loader size="huge">Chargement</Loader>
-      // </Dimmer>
+      </Dimmer>
     );
   }
   return (

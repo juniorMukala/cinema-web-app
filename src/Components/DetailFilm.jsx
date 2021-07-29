@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Rating, Loader, Icon, Header } from "semantic-ui-react";
+import { Rating, Dimmer, Loader, Icon, Header } from "semantic-ui-react";
 import themoviedb from "../services/api.themoviedb";
 import styled from "styled-components";
 import "../scss/detailFilm.scss";
@@ -32,14 +32,14 @@ export default function DetailFilm({ id, close }) {
 
   if (loading) {
     return (
-      // <Dimmer active={loading}>
+      <Dimmer active={loading}>
       <Loader size="huge">Chargement</Loader>
-      // </Dimmer>
+      </Dimmer>
     );
   }
   if (errorModal) {
     return (
-      // <Dimmer active={errorModal}>
+      <Dimmer active={errorModal}>
       <Header icon>
         <Icon name="warning sign" color="red" />
         <p className="text-danger">
@@ -47,7 +47,7 @@ export default function DetailFilm({ id, close }) {
           actualiser la page !
         </p>
       </Header>
-      // </Dimmer>
+      </Dimmer>
     );
   }
 

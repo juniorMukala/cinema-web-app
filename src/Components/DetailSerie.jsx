@@ -2,7 +2,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import '../style.css';
 import React, { useState, useEffect } from "react";
-import { Rating, Loader, Icon, Header } from "semantic-ui-react";
+import { Rating, Dimmer, Loader, Icon, Header } from "semantic-ui-react";
 import themoviedb from "../services/api.themoviedb";
 import styled from "styled-components";
 import "../scss/detailFilm.scss";
@@ -46,14 +46,14 @@ export default function DetailActor({ id, close }) {
   //     : "https://semantic-ui.com/images/wireframe/image.png"})`;
   if (loading) {
     return (
-      // <Dimmer active={loading}>
+      <Dimmer active={loading}>
         <Loader size="huge">Chargement</Loader>
-      /* </Dimmer> */
+      </Dimmer>
     );
   }
   if (errorModal) {
     return (
-      // <Dimmer active={errorModal}>
+      <Dimmer active={errorModal}>
         <Header icon>
           <Icon name="warning sign" color="red" />
           <p className="text-danger">
@@ -61,7 +61,7 @@ export default function DetailActor({ id, close }) {
             actualiser la page !
           </p>
         </Header>
-      /* </Dimmer> */
+      </Dimmer> 
     );
   }
   return (
@@ -90,16 +90,10 @@ export default function DetailActor({ id, close }) {
               <h3>{infoSeries.name}</h3>
               <h4>
                   {infoSeries.known_for_department}
-                {/* {infoSeries.known_for_department
-                  ? new Date(infoSeries.first_air_date).getFullYear()
-                  : "-"} */}
               </h4>
               <span className="minutes">Birthday : {infoSeries.birthday} </span>
               <p className="type">
               Place_of_birth : {infoSeries.place_of_birth}
-                {/* {infoSeries.genres
-                  ? infoSeries.genres.map((genre) => genre.name + "|")
-                  : "-"} */}
               </p>
             </div>
             <div className="movie_desc overflow-auto">
