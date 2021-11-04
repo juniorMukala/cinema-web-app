@@ -1,14 +1,11 @@
 import React from "react";
-import { NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Menu.css";
-import "../style.css"
+import "../style.css";
 
 const Menu = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-black bg-black">
-     <div className="navbar-brand">
-        J<span>M</span>U<span>K</span>
-     </div>
+    <nav className="navbar navbar-expand">
       <button
         className="navbar-toggler"
         type="button"
@@ -21,21 +18,24 @@ const Menu = () => {
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav ml-auto">
+        {/* <div className="navbar-brand">
+          J<span>M</span>U<span>K</span>
+        </div> */}
+        <ul className="navbar-nav">
           <li className="nav-item">
-           <NavLink className="nav-link" to="/">
-              Home <span className="sr-only">(current)</span>
-           </NavLink>
+            <NavLink className="nav-link" to="/">
+              Home
+            </NavLink>
           </li>
           <li className="nav-item">
-           <NavLink className="nav-link" to="/series">
+            <NavLink className="nav-link" to="/series">
               Series
-           </NavLink>
+            </NavLink>
           </li>
           <li className="nav-item">
-           <NavLink className="nav-link " to="/actors">
+            <NavLink className="nav-link " to="/actors">
               Actors
-           </NavLink>
+            </NavLink>
           </li>
         </ul>
       </div>

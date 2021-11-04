@@ -25,7 +25,7 @@ export default function MenuTag({curentPage,switchPage}) {
           return (
             <Label
               as="a"
-              color={curentPage === menu.title ? "yellow" : null}
+              color={curentPage === menu.title ? "red" : null}
               onClick={(e) => {
                 switchPage(menu.title,menu.url)
               }}

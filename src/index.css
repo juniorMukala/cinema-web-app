@@ -4,23 +4,22 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* background-color: black; */
 }
 
 html, body{
   height: 100vh;
   margin: 0;
-  background: black !important;
+  background: #191e25 !important;
   font-family: 'Montserrat', helvetica, arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
 }
 .ui.pagination.menu{
-  background-color: black;
+  background-color: #191e25;
 }
 .ui.menu .item{
   color:white !important;
 }
 .ui.pagination.menu .active.item{
-  background-color: yellow;
+  background-color: #d9534f;
 }

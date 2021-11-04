@@ -5,7 +5,7 @@ import { Dimmer, Input, Loader, Header, Icon} from "semantic-ui-react";
 import themoviedb from "../services/api.themoviedb";
 import CardDetailActor from "../Components/CardDetailActor";
 import ScrollButton from "../Components/ScrollTopButton";
-import Pagination from "../Components/Pagination"
+import Pagination from "../Components/Pagination";
 const Actors = () => {
   const [dataPerson, setDataPerson] = useState([]);
   // const [curentPage, setCurentPage] = useState("News");
@@ -71,6 +71,8 @@ const Actors = () => {
     }
   };
   return (
+    <>
+    <img src= "../images/2095909017-bloodshot.jpg" alt=""/>
     <div className="container">
         <div className="float-sm-right text-align-center">
           <Input
@@ -135,6 +137,7 @@ const Actors = () => {
         </div>
         <ScrollButton /> 
     </div>
+    </>
   );
 };
 export default Actors;

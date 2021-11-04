@@ -9,7 +9,7 @@ function ListesFilms({ dataMovies, series }) {
   const closeViewDetail = () => setViewDetail(false);
   return (
     <>
-      <div className="cardContainer row m-12" >
+      <div className="cardContainer row " >
         {dataMovies && dataMovies.length !== 0 ? (
           dataMovies.map((movie, key) => {
             return (

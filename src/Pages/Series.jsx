@@ -4,7 +4,8 @@ import { Dimmer,Input, Loader, Header, Icon } from "semantic-ui-react";
 import themoviedb from "../services/api.themoviedb";
 import DetailSeries from "../Components/DetailSerie";
 import Pagination from "../Components/Pagination";
-import ScrollButton from "../Components/ScrollTopButton"
+import ScrollButton from "../Components/ScrollTopButton";
+import HomeImage from "../Components/HomeImage"
 
 const Series = () => {
   const [series, setSeries] = useState([]);
@@ -69,6 +70,9 @@ const Series = () => {
     }
   };
   return (
+    <>
+
+<HomeImage/>
     <div className="container">
       <>
         <div className="float-sm-right text-align-center">
@@ -135,6 +139,7 @@ const Series = () => {
         <ScrollButton /> 
       </>
     </div>
+    </>
   );
 };
 export default Series;
